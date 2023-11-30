@@ -1,5 +1,5 @@
 ### Code Board
-The place to post your interesting and fun little code snippets and browser through other. 
+The place to post your interesting and fun little code snippets and browser through others'. 
 Created for developers, by developers.
 
 ## Features
