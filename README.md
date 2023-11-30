@@ -18,25 +18,24 @@ Created for developers, by developers.
 
 ## Live Preview
 
-You can view a fully working demo at [demo-nextjs-with-supabase.vercel.app](https://demo-nextjs-with-supabase.vercel.app/).
+You can view a fully working demo at [SaurabhJe](https://saurabhje.vercel.app/).
 
 
 ## Clone and run locally
 
-1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
+1. You'll first need to clone this repo
 
-2. Create a Next.js app using the Supabase Starter template npx command
 
-   ```bash
-   npx create-next-app -e with-supabase
-   ```
-
-3. Use `cd` to change into the app's directory
+2. Use `cd` to change into the app's directory
 
    ```bash
-   cd name-of-new-app
+   cd code-board
    ```
-
+3. Install all the dependencies
+   
+   ```bash
+   npm install
+   ```
 4. Open `.env.local` and update the following:
 
    ```
