@@ -10,7 +10,7 @@ export default function Navbar() {
           <Image src="/logo-white.svg" alt="logo" height={29} width={50} />
         </Link>
         <ul className="hidden h-full gap-12 lg:flex">
-          <Link className="py-1 px-3 rounded-md text-gray-300 hover:text-white hover:bg-btn-background-hover" href="#">About</Link>
+          <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="#">About</Link>
           <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="#">Contact</Link>
           <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="#">Dashboard</Link>
         </ul>
