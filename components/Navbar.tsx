@@ -1,26 +1,59 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
-import AuthButton from "./AuthButton";
+import { useState } from "react";
+import style from "../app/utils.module.css";
 
 export default function Navbar() {
+  const [navdrop, setNavdrop] = useState(false);
+
   return (
-    <div>
-      <nav className="flex justify-between items-center px-10 py-5">
+    <nav className={`text-xl  py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${navdrop ? 'animate-in ' +  style.navUi : ""} `}>
+
+      <div className={`${style.navTitle} flex items-center justify-between`}>
         <Link href="/">
-          <Image src="/logo-white.svg" alt="logo" height={29} width={50} />
+          <Image src="/logo.svg" alt="logo" width={50} height={50} />
         </Link>
-        <ul className="hidden h-full gap-12 lg:flex">
-          <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="/about">About</Link>
-          <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="#">Contact</Link>
-          <Link className="py-1 px-3 rounded-md hover:bg-btn-background-hover" href="#">Dashboard</Link>
-        </ul>
-        <div className="hidden lg:flex">
-          <AuthButton />
-        </div>
-        <div className="inline-block cursor-pointer lg:hidden">
-          <svg className="w-10 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
-        </div>
-      </nav>
-    </div>
+        <button
+          className="inline-block cursor-pointer md:hidden"
+          onClick={() => setNavdrop(!navdrop)}
+        >
+          <Image
+            src={navdrop ? "cross.svg" : "/hamburger.svg"}
+            alt="logo"
+            height={35}
+            width={35}
+          />
+        </button>
+      </div>
+      <div         
+className={`self-start md:flex flex-col md:flex-row sm:gap-5 md:gap-3 lg:gap-10 ${
+  navdrop ? "flex" : "hidden"
+}`}>
+
+        <Link
+          className=" py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          href="/about"
+        >
+          About
+        </Link>
+        <Link
+          className="py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          href="#"
+        >
+          Contact
+        </Link>
+        <Link
+          className="py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          href="#"
+        >
+          Get Pro
+        </Link>
+        <button className="py-1 md:px-3 flex items-center rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
+          Login
+        </button>
+      </div>
+      
+    </nav>
   );
 }

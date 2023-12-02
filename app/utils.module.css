@@ -1,0 +1,12 @@
+.navdrop{
+    flex-direction: column;
+}
+.navUi{
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    .navTitle {
+        width: 100%;
+    }
+}
