@@ -1,6 +1,6 @@
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
-
+import styles from "../app/utils.module.css";
 
 export default async function Index() {
   const cookieStore = cookies();
@@ -17,7 +17,10 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className="flex flex-col items-center">
+    <div>
+      <code>
+        This is extremely dumb
+      </code>
     </div>
   );
 }
