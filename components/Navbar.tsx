@@ -36,23 +36,29 @@ export default function Navbar() {
       >
         <Link
           className=" py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
-          href="/about"
+          href="#about"
         >
           About
         </Link>
         <Link
           className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
-          href="#"
+          href="#contact"
         >
           Contact
         </Link>
         <Link
           className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
-          href="#"
+          href="getpro"
         >
           Get Pro
         </Link>
-        <button className="py-1 md:px-3 flex items-center rounded-md md:hover:bg-btn-background-hover">
+        <button className="py-1 md:px-3 text-white flex items-center rounded-md bg-btn-background hover:bg-btn-background-hover">
+        <Image
+            src="/login.svg"
+            alt="login"
+            height={20}
+            width={20}
+          />
           Login
         </button>
       </div>
