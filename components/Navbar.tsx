@@ -8,8 +8,11 @@ export default function Navbar() {
   const [navdrop, setNavdrop] = useState(false);
 
   return (
-    <nav className={`text-xl  py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${navdrop ? 'animate-in ' +  style.navUi : ""} `}>
-
+    <nav
+      className={`text-xl  py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
+        navdrop ? "animate-in " + style.navUi : ""
+      } `}
+    >
       <div className={`${style.navTitle} flex items-center justify-between`}>
         <Link href="/">
           <Image src="/logo.svg" alt="logo" width={50} height={50} />
@@ -26,34 +29,33 @@ export default function Navbar() {
           />
         </button>
       </div>
-      <div         
-className={`self-start md:flex flex-col md:flex-row sm:gap-5 md:gap-3 lg:gap-10 ${
-  navdrop ? "flex" : "hidden"
-}`}>
-
+      <div
+        className={`${style.links} self-start md:flex ${
+          navdrop ? "flex" : "hidden"
+        } flex-col md:flex-row sm:gap-5 md:gap-3 lg:gap-10`}
+      >
         <Link
-          className=" py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          className=" py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
           href="/about"
         >
           About
         </Link>
         <Link
-          className="py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
           href="#"
         >
           Contact
         </Link>
         <Link
-          className="py-1 md:px-3 rounded-md hover:bg-btn-background-hover"
+          className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
           href="#"
         >
           Get Pro
         </Link>
-        <button className="py-1 md:px-3 flex items-center rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
+        <button className="py-1 md:px-3 flex items-center rounded-md md:hover:bg-btn-background-hover">
           Login
         </button>
       </div>
-      
     </nav>
   );
 }

@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        hoverbtn: '#42A5F5',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         btn: {
