@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className={GeistSans.className}>
       <body className="bg-background text-foreground">
         <Navbar/>
-        <main className="relative overflow-hidden min-h-screen flex flex-col items-center">
+        <main className="overflow-hidden min-h-screen flex flex-col items-center">
           {children}
         </main>
         <Footer/>

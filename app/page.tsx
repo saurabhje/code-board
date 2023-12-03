@@ -1,5 +1,6 @@
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
+import Code from "@/components/Code";
 import styles from "../app/utils.module.css";
 
 export default async function Index() {
@@ -17,10 +18,13 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div>
-      <code>
-        This is extremely dumb
-      </code>
+    <div className="flex flex-col lg:flex-row items-center justify-center">
+    <div className="text">
+        <p>Where the laziness meets expertise</p>
+    </div>
+    <div className="code">
+      <Code code = "this is just checking how it works to be honest nothing fancy" />
+    </div>
     </div>
   );
 }

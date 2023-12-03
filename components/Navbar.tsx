@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`text-xl  py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
+      className={`text-stone-300 py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
         navdrop ? "animate-in " + style.navUi : ""
       } `}
     >
