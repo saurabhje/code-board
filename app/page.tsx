@@ -33,7 +33,7 @@ export default async function Index() {
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className={`${styles.container} flex flex-col`}>
+    <div className={`${styles.container} flex flex-col items-center py-24 lg:py-10`}>
       <div className={styles.texts}>
         <p>This is text based information</p>
       </div>
