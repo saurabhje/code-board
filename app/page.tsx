@@ -14,17 +14,32 @@ export default async function Index() {
       return false;
     }
   };
-
+  const jsxCode = (
+    `
+    <div className="rounded-md px-5">
+      <div className="flex items-center justify-between bg-foreground/5">
+        File Name  
+        <button
+          onClick={copy}
+          className="p-1 rounded-md hover:bg-foreground/10"
+        >
+          {icon}
+        </button>
+      </div>
+      <code className="flex-wrap block">Your custom code here</code>
+    </div>
+    `
+  );
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center">
-    <div className="text">
-        <p>Where the laziness meets expertise</p>
-    </div>
-    <div className="code">
-      <Code code = "this is just checking how it works to be honest nothing fancy" />
-    </div>
+    <div className={`${styles.container} flex flex-col`}>
+      <div className={styles.texts}>
+        <p>This is text based information</p>
+      </div>
+      <div className={styles.code}>
+        <Code code={jsxCode}/>
+      </div>
     </div>
   );
 }

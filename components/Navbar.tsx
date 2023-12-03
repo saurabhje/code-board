@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`text-stone-300 py-5 px-6 lg:px-10 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
+      className={`py-5 px-6 lg:px-20 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
         navdrop ? "animate-in " + style.navUi : ""
       } `}
     >
@@ -30,7 +30,7 @@ export default function Navbar() {
         </button>
       </div>
       <div
-        className={`${style.links} self-start md:flex ${
+        className={`${style.links} self-start md:flex md:text-stone-300 ${
           navdrop ? "flex" : "hidden"
         } flex-col md:flex-row sm:gap-5 md:gap-3 lg:gap-10`}
       >

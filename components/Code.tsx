@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 const CopyIcon = () => (
   <svg
@@ -17,7 +17,7 @@ const CopyIcon = () => (
     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
   </svg>
-)
+);
 
 const CheckIcon = () => (
   <svg
@@ -33,26 +33,28 @@ const CheckIcon = () => (
   >
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
-)
+);
 
 export default function Code({ code }: { code: string }) {
-  const [icon, setIcon] = useState(CopyIcon)
+  const [icon, setIcon] = useState(CopyIcon);
 
   const copy = async () => {
-    await navigator?.clipboard?.writeText(code)
-    setIcon(CheckIcon)
-    setTimeout(() => setIcon(CopyIcon), 2000)
-  }
-
+    await navigator?.clipboard?.writeText(code);
+    setIcon(CheckIcon);
+    setTimeout(() => setIcon(CopyIcon), 2000);
+  };
   return (
-    <pre className="bg-foreground/5 rounded-md px-5 py-2">
-      <code>{code}</code>
-      <button
-        onClick={copy}
-        className="p-1 rounded-md bg-foreground/5 hover:bg-foreground/10"
-      >
-        {icon}
-      </button>
-    </pre>
-  )
-}
+    <div className="rounded-md py-2 border-white">
+      <div className="flex items-center justify-between bg-slate-900 text-base px-2">
+        <p>Filename.jsx</p>
+        <button
+          onClick={copy}
+          className="p-1 rounded-md hover:bg-foreground/10"
+        >
+          {icon}
+        </button>
+      </div>
+      <code className="flex-wrap block bg-foreground/5 pt-2 px-2">{code}</code>
+    </div>
+  );
+  }  
