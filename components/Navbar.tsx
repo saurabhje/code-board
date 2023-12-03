@@ -9,9 +9,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`py-5 px-6 lg:px-20 flex flex-col md:flex-row md:justify-between items-center gap-3  ${
-        navdrop ? "animate-in " + style.navUi : ""
-      } `}
+      className={`py-5 px-6 lg:px-20 flex flex-col md:flex-row md:justify-between items-center gap-3 z-10 ${
+        navdrop ? "animate-slideIn " + style.navUi : ""
+      }`}
     >
       <div className={`${style.navTitle} flex items-center justify-between`}>
         <Link href="/">
@@ -53,12 +53,7 @@ export default function Navbar() {
           Get Pro
         </Link>
         <button className="py-1 md:px-3 text-white flex items-center rounded-md bg-btn-background hover:bg-btn-background-hover">
-        <Image
-            src="/login.svg"
-            alt="login"
-            height={20}
-            width={20}
-          />
+          <Image src="/login.svg" alt="login" height={20} width={20} />
           Login
         </button>
       </div>

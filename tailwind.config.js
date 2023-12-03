@@ -15,7 +15,29 @@ module.exports = {
           'background-hover': 'hsl(var(--btn-background-hover))',
         },
       },
+      animation: {
+        slideIn: 'slideIn 0.3s ease-in-out',
+        slideOut: 'slideOut 0.2s ease-in'
+      },
+      keyframes: {
+        slideIn: {
+          '0%': {
+            transform: 'translateY(-100%)',
+          },
+          '100%': {
+            transform: 'translateY(0%)',
+          },
+        },
+        slideOut: {
+          '0%': {
+            transform: 'translateY(0%)',
+          },
+          '100%': {
+            transform: 'translateY(-100%)',
+          },
+        },
+      },
     },
-  },
-  plugins: []
+    plugins: []
+  }
 }

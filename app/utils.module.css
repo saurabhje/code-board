@@ -13,6 +13,8 @@
         width: 100%;
     }
     .navUi{
+        position: absolute;
+        top: 0;
         background-color: white;
         color: black;
         width: 100%;
