@@ -1,6 +1,6 @@
 "use client";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useState } from "react";
 
 const CopyIcon = () => (
@@ -36,7 +36,7 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default function Code({ code }: { code: string }) {
+export default function Code({ code, language }: { code: string, language: string }) {
   const [icon, setIcon] = useState(CopyIcon);
 
   const copy = async () => {
@@ -46,7 +46,7 @@ export default function Code({ code }: { code: string }) {
   };
 
   return (
-    <div className="rounded-md py-2">
+    <div className="rounded-md">
       <div className="flex items-center justify-between bg-slate-900 text-base py-1 px-2">
         <p>Filename.jsx</p>
         <button
@@ -56,7 +56,9 @@ export default function Code({ code }: { code: string }) {
           {icon}
         </button>
       </div>
-      <SyntaxHighlighter language="javascript" style={dark}>{code}</SyntaxHighlighter>
+      <SyntaxHighlighter className="mt-0 p-0" language={language} style={okaidia}>
+        {code}
+      </SyntaxHighlighter>
     </div>
   );
 }

@@ -28,6 +28,13 @@ export default async function Index() {
       <code className="flex-wrap block">Your custom code here</code>
     </div>
     `;
+  const cppCode = `
+    #include<stdc++.h>
+    int main(){
+      std::cout<<"Hello World!";
+      return 0;
+    }
+  `;
   const isSupabaseConnected = canInitSupabaseClient();
 
   return (
@@ -41,7 +48,8 @@ export default async function Index() {
         <p>Elevate Your Coding Experience by Discovering and Contributing snippets</p>
       </div>
       <div className={`${styles.code} animate-in w-full`}>
-        <Code code={jsxCode} />
+        <Code language='javascript' code={jsxCode}/>
+        <Code language='cpp' code={cppCode} />
       </div>
     </div>
   );

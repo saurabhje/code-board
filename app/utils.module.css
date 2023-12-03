@@ -6,11 +6,6 @@
 }
 .code{
     align-self: flex-start;
-    height: 400px;
-}
-.curvy{
-    height: 400px;
-    min-width: 100%;
 }
 
 @media screen and (max-width: 768px) {
