@@ -32,7 +32,7 @@ export default function Navbar() {
       <div
         className={`${style.links} self-start md:flex md:text-stone-300 ${
           navdrop ? "flex" : "hidden"
-        } flex-col md:flex-row sm:gap-5 md:gap-3 lg:gap-10`}
+        } flex-col md:flex-row gap-2 lg:gap-10`}
       >
         <Link
           className=" py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"

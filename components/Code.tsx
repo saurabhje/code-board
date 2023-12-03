@@ -1,5 +1,6 @@
 "use client";
-
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useState } from "react";
 
 const CopyIcon = () => (
@@ -43,9 +44,10 @@ export default function Code({ code }: { code: string }) {
     setIcon(CheckIcon);
     setTimeout(() => setIcon(CopyIcon), 2000);
   };
+
   return (
-    <div className="rounded-md py-2 border-white">
-      <div className="flex items-center justify-between bg-slate-900 text-base px-2">
+    <div className="rounded-md py-2">
+      <div className="flex items-center justify-between bg-slate-900 text-base py-1 px-2">
         <p>Filename.jsx</p>
         <button
           onClick={copy}
@@ -54,7 +56,7 @@ export default function Code({ code }: { code: string }) {
           {icon}
         </button>
       </div>
-      <code className="flex-wrap block bg-foreground/5 pt-2 px-2">{code}</code>
+      <SyntaxHighlighter language="javascript" style={dark}>{code}</SyntaxHighlighter>
     </div>
   );
-  }  
+}

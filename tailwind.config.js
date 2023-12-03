@@ -7,7 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hoverbtn: '#42A5F5',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         btn: {
@@ -17,7 +16,7 @@ module.exports = {
       },
       animation: {
         slideIn: 'slideIn 0.3s ease-in-out',
-        slideOut: 'slideOut 0.2s ease-in'
+        slideLeft: 'slideLeft 0.7s ease-in'
       },
       keyframes: {
         slideIn: {
@@ -28,12 +27,12 @@ module.exports = {
             transform: 'translateY(0%)',
           },
         },
-        slideOut: {
+        slideLeft: {
           '0%': {
-            transform: 'translateY(0%)',
+            transform: 'translateX(-50%)',
           },
           '100%': {
-            transform: 'translateY(-100%)',
+            transform: 'translateX(%)',
           },
         },
       },
