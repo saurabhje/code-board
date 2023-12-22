@@ -2,6 +2,8 @@ import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
 import Code from "@/components/Code";
 import styles from "../app/utils.module.css";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default async function Index() {
   const cookieStore = cookies();
@@ -15,18 +17,15 @@ export default async function Index() {
     }
   };
   const jsxCode = `
-    <div className="rounded-md px-5">
-      <div className="flex items-center justify-between bg-foreground/5">
-        File Name  
-        <button
-          onClick={copy}
-          className="p-1 rounded-md hover:bg-foreground/10"
-        >
-          {icon}
-        </button>
-      </div>
-      <code className="flex-wrap block">Your custom code here</code>
-    </div>
+  export default my Component(){
+    return(
+      <>
+        <section classname="px-10 py-5">
+          Hello World!
+        </section>
+      </>
+    )
+  }
     `;
   const cppCode = `
     #include<stdc++.h>
@@ -42,15 +41,24 @@ export default async function Index() {
       className={`${styles.container} flex flex-col items-center py-24 gap-10 lg:py-10`}
     >
       <div
-        className={`${styles.texts} text-3xl md:text-5xl lg:text-7xl font-bold animate-in`}
+        className={`self-start text-3xl md:text-5xl lg:text-7xl font-bold animate-in`}
       >
         {" "}
-        <p>Elevate Your Coding Experience by Discovering and Contributing snippets</p>
+        <p>
+          Elevate Your Coding Experience by Discovering and Contributing
+          snippets
+        </p>
       </div>
-      <div className={`${styles.code} animate-in w-full`}>
-        <Code language='javascript' code={jsxCode}/>
-        <Code language='cpp' code={cppCode} />
-      </div>
+      <section id="codeSnippets" className={`self-start animate-in w-full`}>
+        <Code language="javascript" code={jsxCode} />
+        <Code language="cpp" code={cppCode} />
+      </section>
+      <section id="about">
+        <About/>
+      </section>
+      <section id="contact">
+        <Contact/>
+      </section>
     </div>
   );
 }

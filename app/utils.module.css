@@ -1,13 +1,9 @@
 .container{
     max-width: 90%;
 }
-.texts{
-    align-self: flex-start;
+.psections p{
+    margin-top: 10px;
 }
-.code{
-    align-self: flex-start;
-}
-
 @media screen and (max-width: 768px) {
     .navTitle {
         width: 100%;
