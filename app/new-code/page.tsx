@@ -1,7 +1,7 @@
-import styles from "../utils.module.css";
+// import styles from "../utils.module.css";
 export default function AddCode() {
   return (
-    <div className={`${styles.form} w-full px-4 mx-10`}>
+    <div className={`w-full px-4 mx-10`}>
       <form>
       <div className="w-full flex flex-col">
             <label className="font-bold text-gray-400" htmlFor="title">Code title </label>
@@ -13,7 +13,7 @@ export default function AddCode() {
         </div>
         <div className="w-full flex flex-col">
             <label className="font-bold text-gray-400" htmlFor="snippet">Your code</label>
-            <textarea id="snippet" rows={8}/>
+            <textarea id="snippet" className="text-black" rows={8}/>
         </div>
       </form>
     </div>
