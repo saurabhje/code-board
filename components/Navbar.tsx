@@ -36,13 +36,13 @@ export default function Navbar() {
       >
         <Link
           className=" py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
-          href="#about"
+          href="/#about"
         >
           About
         </Link>
         <Link
           className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
-          href="#contact"
+          href="/#contact"
         >
           Contact
         </Link>
