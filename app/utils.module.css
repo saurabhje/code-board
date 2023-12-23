@@ -5,10 +5,10 @@
     margin-top: 10px;
 }
 
-.form input{
-    background-color: #000;
-    color: white;
+.form input, .form textarea{
+    border: solid 1px gray;
 }
+
 @media screen and (max-width: 768px) {
     .navTitle {
         width: 100%;
