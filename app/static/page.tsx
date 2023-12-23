@@ -1,4 +1,5 @@
 import supabase from "../../utils/supabase/client";
+import Code from "@/components/Code";
 
 export default async function Snippets() {
   const { data: snippets, error } = await supabase
@@ -19,7 +20,7 @@ export default async function Snippets() {
         snippets.map((snippet, index) => (
           <div key={index}>
             <h2>{snippet.title}</h2>
-            <pre>{snippet.content}</pre>
+            <Code language="cpp" code={snippet.content}/>
           </div>
         ))}
     </div>

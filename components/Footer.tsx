@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="w-full border-t border-t-foreground/10 pb-10 pt-3 flex-col text-center text-xs">
+    <div className="w-full border-t border-t-foreground/10 p-3 flex-col text-center text-xs">
       <p>
         Created by{" "}
         <a

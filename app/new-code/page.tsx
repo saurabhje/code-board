@@ -1,10 +1,10 @@
 import styles from "../utils.module.css";
 import SendData from "@/components/SendData";
 export default function AddCode() {
-  SendData();
+
   return (
     <div className="p-10 w-full">
-      <form className={`${styles.form}`}>
+      <form method="POST" className={`${styles.form}`}>
         <div className="w-full flex flex-col">
           <label>Title</label>
           <input
