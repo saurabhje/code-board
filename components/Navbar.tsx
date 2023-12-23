@@ -35,7 +35,7 @@ export default function Navbar() {
         } flex-col md:flex-row gap-2 lg:gap-10`}
       >
         <Link
-          className=" py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
+          className="py-1 md:px-3 rounded-md md:hover:bg-btn-background-hover"
           href="/#about"
         >
           About
