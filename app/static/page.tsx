@@ -12,7 +12,6 @@ interface Snippet {
 
 export default async function Snippets() {
   'use server';
-  try {
     const snippets = (await getServerData()) as Snippet[] | PostgrestError;
 
     if (Array.isArray(snippets)) {
@@ -41,12 +40,4 @@ export default async function Snippets() {
         </div>
       );
     }
-  } catch (error) {
-    console.error("Unexpected error:",error);
-    return (
-      <div className="mt-10 p-10">
-        <p>Error Loading data</p>
-      </div>
-    );
-  }
 }
