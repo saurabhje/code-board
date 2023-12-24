@@ -11,16 +11,15 @@ interface Snippet {
 }
 
 export default async function Snippets() {
-  'use server';
     const snippets = (await getServerData()) as Snippet[] | PostgrestError;
 
     if (Array.isArray(snippets)) {
       return (
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-2 gap-6">
           {snippets.map((snippet, index) => (
             <div key={index}>
               <h2>{snippet.title}</h2>
-              <Code language="cpps" code={snippet.content} />
+              <Code language={snippet.language} code={snippet.content} />
             </div>
           ))}
         </div>
