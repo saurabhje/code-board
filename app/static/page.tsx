@@ -3,10 +3,9 @@ import Code from "@/components/Code";
 
 export default async function Snippets() {
   'use server';
-  const { data: snippets, error } = await supabase
+  const {data: snippets, error } = await supabase
     .from("snippets")
     .select("title,content");
-
   if (error) {
     return (
       <div className="mt-10 p-10">
