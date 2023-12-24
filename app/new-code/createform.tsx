@@ -13,7 +13,8 @@ export default function AddForm() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
-    SendData(title,language,snippet);
+    const result = await SendData(title,language,snippet);
+    setLoading(false);
   };
   {
     error && <span> Error Encountered</span>;
