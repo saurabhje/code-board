@@ -2,6 +2,7 @@ import supabase from "../../utils/supabase/client";
 import Code from "@/components/Code";
 
 export default async function Snippets() {
+  'use server';
   const { data: snippets, error } = await supabase
     .from("snippets")
     .select("title,content");
