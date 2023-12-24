@@ -8,8 +8,8 @@
   "dependencies": {
     "@mdx-js/loader": "^3.0.0",
     "@next/mdx": "^14.0.3",
-    "@supabase/ssr": "latest",
-    "@supabase/supabase-js": "latest",
+    "@supabase/ssr": "^0.0.10",
+    "@supabase/supabase-js": "^2.39.1",
     "autoprefixer": "10.4.15",
     "daisyui": "^4.4.17",
     "geist": "^1.0.0",

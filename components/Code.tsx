@@ -48,7 +48,7 @@ export default function Code({ code, language }: { code: string, language: strin
   return (
     <div className="rounded-md">
       <div className="flex items-center justify-between bg-slate-900 text-base py-1 px-2">
-        <p>Filename.jsx</p>
+        <p>{language}</p>
         <button
           onClick={copy}
           className="p-1 rounded-md hover:bg-foreground/10"
