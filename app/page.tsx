@@ -4,7 +4,7 @@ import Code from "@/components/Code";
 import styles from "../app/utils.module.css";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-
+import ShowCode from "@/components/ShowCode"
 export default async function Index() {
   const cookieStore = cookies();
 
@@ -52,6 +52,10 @@ export default async function Index() {
       <section id="codeSnippets" className={`self-start animate-in w-full`}>
         <Code language="javascript" code={jsxCode} />
         <Code language="cpp" code={cppCode} />
+      </section>
+      <section>
+        This is where i plan to show codes
+        <ShowCode />
       </section>
       <section id="about">
         <About/>
