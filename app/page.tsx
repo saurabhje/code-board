@@ -53,14 +53,14 @@ export default async function Index() {
         <Code language="javascript" code={jsxCode} />
         <Code language="cpp" code={cppCode} />
       </section>
-      <section>
-        This is where i plan to show codes
+      <section className="self-start w-full">
+        <h1 className="text-center text-[2rem] font-bold">Codes</h1>
         <ShowCode />
       </section>
       <section id="about">
         <About/>
       </section>
-      <section id="contact">
+      <section className="self-start" id="contact">
         <Contact/>
       </section>
     </div>

@@ -14,16 +14,14 @@ export default async function Snippets() {
 
   if (Array.isArray(snippets)) {
     return (
-      <div className={`w-full py-24 flex items-center justify-center`}>
-        <div className="w-full self-start grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="py-8 columns-1 lg:columns-2 space-y-10">
           {snippets.map((snippet, index) => (
-            <div key={index} className="mb-4">
+            <div key={index} className="lg:mx-2 break-inside-avoid">
+              <h2 className="mb-2 text-xl">{snippet.title}</h2>
               <Code language={snippet.language} code={snippet.content} />
-              <h2 className="mt-2">{snippet.title}</h2>
             </div>
           ))}
         </div>
-      </div>
     );
   } else if ("message" in snippets) {
     console.error("PostgrestError:", snippets.message);
