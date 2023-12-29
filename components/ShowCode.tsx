@@ -14,9 +14,9 @@ export default async function Snippets() {
 
   if (Array.isArray(snippets)) {
     return (
-        <div className="py-8 columns-1 lg:columns-2 space-y-10">
+        <div className="py-8 columns-1 lg:columns-2 space-y-14">
           {snippets.map((snippet, index) => (
-            <div key={index} className="lg:mx-2 break-inside-avoid">
+            <div key={index} className="break-inside-avoid">
               <h2 className="mb-2 text-xl">{snippet.title}</h2>
               <Code language={snippet.language} code={snippet.content} />
             </div>

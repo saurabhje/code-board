@@ -4,7 +4,8 @@ import Code from "@/components/Code";
 import styles from "../app/utils.module.css";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import ShowCode from "@/components/ShowCode"
+
+
 export default async function Index() {
   const cookieStore = cookies();
 
@@ -41,22 +42,18 @@ export default async function Index() {
       className={`${styles.container} flex flex-col items-center py-24 gap-10 lg:py-10`}
     >
       <div
-        className={`self-start text-3xl md:text-5xl lg:text-7xl font-bold animate-in`}
+        className={`self-start animate-in`}
       >
         {" "}
-        <p>
+        <p className="text-3xl md:text-5xl lg:text-7xl font-bold ">
           Elevate Your Coding Experience by Discovering and Contributing
           snippets
         </p>
-      </div>
       <section id="codeSnippets" className={`self-start animate-in w-full`}>
         <Code language="javascript" code={jsxCode} />
         <Code language="cpp" code={cppCode} />
       </section>
-      <section className="self-start w-full">
-        <h1 className="text-center text-[2rem] font-bold">Codes</h1>
-        <ShowCode />
-      </section>
+      </div>
       <section id="about">
         <About/>
       </section>

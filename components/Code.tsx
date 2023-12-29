@@ -56,7 +56,7 @@ export default function Code({ code, language }: { code: string, language: strin
           {icon}
         </button>
       </div>
-      <SyntaxHighlighter language={language} style={okaidia}>
+      <SyntaxHighlighter language={language} style={okaidia} customStyle={{margin:'0'}}>
         {code}
       </SyntaxHighlighter>
     </div>
