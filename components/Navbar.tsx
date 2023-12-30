@@ -46,10 +46,11 @@ export default function Navbar() {
         >
           Contact
         </Link>
-        <button className="py-1 md:px-3 text-white flex items-center rounded-md bg-btn-background hover:bg-btn-background-hover">
+        <Link className="py-1 md:px-3 text-white flex items-center rounded-md bg-btn-background hover:bg-btn-background-hover"
+          href="/login">
           <Image src="/login.svg" alt="login" height={20} width={20} />
           Login
-        </button>
+        </Link>
       </div>
     </nav>
   );
