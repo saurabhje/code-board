@@ -45,11 +45,15 @@ export default async function Index() {
         className={`self-start animate-in`}
       >
         {" "}
-        <p className="text-3xl md:text-5xl lg:text-7xl font-bold ">
+        <p className="text-2xl md:text-3xl lg:text-5xl font-bold ">
           Elevate Your Coding Experience by Discovering and Contributing
           snippets
         </p>
-      <section id="codeSnippets" className={`self-start animate-in w-full`}>
+      <section id="codeSnippets" className={`self-start mt-10 animate-in w-full`}>
+        <div>
+        <input type="text" className="w-4/5 lg:2/3 p-1 bg-transparent border border-gray-500"/>
+        <button className="mt-2 py-1 px-5 rounded-md bg-btn-background md:hover:bg-btn-background-hover"> Search </button>
+        </div>
         <Code language="javascript" code={jsxCode} />
         <Code language="cpp" code={cppCode} />
       </section>
