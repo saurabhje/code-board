@@ -9,7 +9,6 @@
     border: solid 1px gray;
 }
 
-
 @media screen and (max-width: 768px) {
     .navTitle {
         width: 100%;
