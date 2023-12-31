@@ -11,7 +11,7 @@ interface SearchResult {
 
 export default async function SearchCode() {
   "use server";
-  const searchQuery = "binary search";
+  const searchQuery = "";
   const searchData = (await getSearchData(searchQuery)) as SearchResult[];
 
   if (!Array.isArray(searchData)) {
@@ -43,7 +43,7 @@ export default async function SearchCode() {
         </Link>
       </div>
       }
-      {!searchData && <Snippets />}
+      <Snippets />
     </div>
   );
 }

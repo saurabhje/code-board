@@ -10,7 +10,6 @@ interface Snippet {
 }
 
 export default async function Snippets() {
-  'use server'
   const snippets = (await getServerData()) as Snippet[] | PostgrestError;
 
   if (Array.isArray(snippets)) {
