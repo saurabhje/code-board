@@ -60,7 +60,7 @@ with open("exmp.txt", "r") as file:
         <p className="py-1 px-2 bg-zinc-900">{random}</p>
         {random == "javascript" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em]"
+            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em] md:text-[1em]"
             speed={99}
             sequence={[`${code2}`, 6000]}
             cursor={false}
@@ -68,7 +68,7 @@ with open("exmp.txt", "r") as file:
         )}
         {random == "cpp" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em]"
+            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em] md:text-[1em]"
             speed={99}
             sequence={[`${code1}`, 6000]}
             cursor={false}
