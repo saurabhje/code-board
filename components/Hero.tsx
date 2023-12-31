@@ -22,7 +22,6 @@ with open("exmp.txt", "w") as file:
 with open("exmp.txt", "r") as file:
     content = file.read()
     print(content)
-
 `;
 
   const [random, setRandom] = useState(">..");
@@ -61,7 +60,7 @@ with open("exmp.txt", "r") as file:
         <p className="py-1 px-2 bg-zinc-900">{random}</p>
         {random == "javascript" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono text-[1em]"
+            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em]"
             speed={99}
             sequence={[`${code2}`, 6000]}
             cursor={false}
@@ -69,7 +68,7 @@ with open("exmp.txt", "r") as file:
         )}
         {random == "cpp" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono text-[1em]"
+            className="px-2 py-1 whitespace-pre block font-mono text-[0.8em]"
             speed={99}
             sequence={[`${code1}`, 6000]}
             cursor={false}
