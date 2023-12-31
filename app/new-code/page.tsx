@@ -1,4 +1,4 @@
-import AddForm from "./createform"
+import AddForm from "@/components/Createform"
 export default function AddSyntax(){
     return(
         <main className="w-full">

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import SendData from "@/components/SendData";
-import styles from "../utils.module.css";
+import styles from "../app/utils.module.css"
 
 export default function AddForm() {
   const [title, setTitle] = useState("");
