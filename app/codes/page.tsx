@@ -31,17 +31,18 @@ export default async function SearchCode() {
         Search
       </button>
       {searchData.map((searchItem, index) => (
-        <>        <div key={index} className="mt-10">
+        <div key={index} className="mt-10">
         <h2 className="mb-2 text-xl">{searchItem.title}</h2>
         <Code language={searchItem.language} code={searchItem.content} />
       </div>
-      <div className="mt-4">
+      ))}
+       {searchData && <div className="mt-4">
         <p>Could Not find what you were looking for?</p>
         <Link className="underline" href="/new-code">
         Contribute to our code Source
         </Link>
-      </div></>
-      ))}
+      </div>
+      }
       {!searchData && <Snippets />}
     </div>
   );

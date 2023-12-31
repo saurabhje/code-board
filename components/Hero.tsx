@@ -4,24 +4,25 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
-  const code1 = `#include<stdc++.h/bits>
+  const code1 = 
+` #include<stdc++.h/bits>
   using namespace std;
   int main(){
-      string str = "Hello World!";
-      cout<<str<<endl;
-      return 0;
+    string str = "Hello World!";
+    cout<<str<<endl;
+    return 0;
   }`;
 
-  const code2 = `function fibonacci(n) {
-    if (n <= 1) {
-      return n;
-    }
-  return fibonacci(n-1) + fibonacci(n-2);
-  }
+  const code2 = `
+  # Writing to a file
+with open("exmp.txt", "w") as file:
+    file.write("Hello, File!")
 
-  const result = fibonacci(10);
-  console.log("Fibonacci(10):", result);
-  
+# Reading from a file
+with open("exmp.txt", "r") as file:
+    content = file.read()
+    print(content)
+
 `;
 
   const [random, setRandom] = useState(">..");
@@ -37,7 +38,7 @@ export default function Hero() {
                 setRandom("cpp");
               },
               6000,
-              "Fibonacci number using in JavaScript",
+              "File handling in Python",
               () => {
                 setRandom("javascript");
               },
