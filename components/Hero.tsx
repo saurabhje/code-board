@@ -30,7 +30,7 @@ with open("exmp.txt", "r") as file:
   return (
     <div>
       <div className="w-full flex flex-col mb-10 lg:justify-between items-start  lg:flex-row">
-        <div className="w-96 lg:w-3/4 border rounded bg-inherit py-1 px-2">
+        <div className="w-full lg:w-3/4 border rounded bg-inherit py-1 px-2">
           <TypeAnimation
             sequence={[
               "How to print Hello World! in C++", 
@@ -57,11 +57,11 @@ with open("exmp.txt", "r") as file:
           Start searching
         </Link>
       </div>
-      <div className="min-h-[220px] bg-slate-900 animate-in">
+      <div className="min-h-[220px] bg-slate-900 animate-in max-w-96">
         <p className="py-1 px-2 bg-zinc-900">{random}</p>
         {random == "javascript" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono"
+            className="min-h-[120px] px-2 py-1 whitespace-pre block font-mono text-[1em]"
             speed={99}
             sequence={[`${code2}`, 6000]}
             cursor={false}
@@ -69,7 +69,7 @@ with open("exmp.txt", "r") as file:
         )}
         {random == "cpp" && (
           <TypeAnimation
-            className="px-2 py-1 whitespace-pre block font-mono"
+            className="px-2 py-1 whitespace-pre block font-mono text-[1em]"
             speed={99}
             sequence={[`${code1}`, 6000]}
             cursor={false}
