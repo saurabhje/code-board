@@ -1,6 +1,6 @@
 import { PostgrestError } from "@supabase/supabase-js";
 import Code from "@/components/Code";
-import getServerData from "@/components/ServerData";
+import { getServerData } from "./ServerData";
 export const revalidate = 0;
 
 interface Snippet {
@@ -10,6 +10,7 @@ interface Snippet {
 }
 
 export default async function Snippets() {
+  'use server'
   const snippets = (await getServerData()) as Snippet[] | PostgrestError;
 
   if (Array.isArray(snippets)) {

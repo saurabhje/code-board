@@ -1,15 +1,22 @@
 import { getSearchData } from "@/components/ServerData";
 import Snippets from "@/components/ShowCode";
 import Code from "@/components/Code";
+import Link from "next/link";
 
-interface Searchdata {
-    title: string;
-    language: string;
-    content: string;
+interface SearchResult {
+  title: string;
+  language: string;
+  content: string;
+}
+
+export default async function SearchCode() {
+  "use server";
+  const searchQuery = "binary search";
+  const searchData = (await getSearchData(searchQuery)) as SearchResult[];
+
+  if (!Array.isArray(searchData)) {
+    return <div>Error loading data</div>;
   }
-export default async function Jovier() {
-    const searchQuery = 'binary search';
-  const Searchdata = (await getSearchData(searchQuery)) as Searchdata[];
   return (
     <div className="w-full py-12 px-4 lg:px-1">
       <div className="flex flex-col">
@@ -20,14 +27,22 @@ export default async function Jovier() {
           type="text"
         />
       </div>
-      <button className="mt-2 py-1 px-5 rounded-md bg-btn-background md:hover:bg-btn-background-hover">Search</button>
-      {Searchdata.map((searchItem, index) => (
-        <div key={index} className="break-inside-avoid">
-          <h2 className="mb-2 text-xl">{searchItem.title}</h2>
-          <Code language={searchItem.language} code={searchItem.content} />
-        </div>
+      <button className="mt-2 py-1 px-5 rounded-md bg-btn-background md:hover:bg-btn-background-hover">
+        Search
+      </button>
+      {searchData.map((searchItem, index) => (
+        <>        <div key={index} className="mt-10">
+        <h2 className="mb-2 text-xl">{searchItem.title}</h2>
+        <Code language={searchItem.language} code={searchItem.content} />
+      </div>
+      <div className="mt-4">
+        <p>Could Not find what you were looking for?</p>
+        <Link className="underline" href="/new-code">
+        Contribute to our code Source
+        </Link>
+      </div></>
       ))}
-      {/* <Snippets /> */}
+      {!searchData && <Snippets />}
     </div>
   );
 }
