@@ -51,7 +51,7 @@ with open("exmp.txt", "r") as file:
         </div>
         <Link
           className="mt-2 lg:mt-0 lg:ml-6 py-1 lg:py-2 px-2 rounded-md bg-btn-background md:hover:bg-btn-background-hover"
-          href="/codes"
+          href="/search"
         >
           Start searching
         </Link>
