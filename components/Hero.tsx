@@ -57,11 +57,11 @@ with open("exmp.txt", "r") as file:
           Start searching
         </Link>
       </div>
-      <div className="min-h-[220px] bg-slate-900 animate-in max-w-96">
+      <div className="min-h-[200px] bg-slate-900 animate-in max-w-96">
         <p className="py-1 px-2 bg-zinc-900">{random}</p>
         {random == "javascript" && (
           <TypeAnimation
-            className="min-h-[120px] px-2 py-1 whitespace-pre block font-mono text-[1em]"
+            className="px-2 py-1 whitespace-pre block font-mono text-[1em]"
             speed={99}
             sequence={[`${code2}`, 6000]}
             cursor={false}
