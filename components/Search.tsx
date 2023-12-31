@@ -2,6 +2,7 @@ import { getSearchData } from "@/components/ServerData";
 import { PostgrestError } from "@supabase/supabase-js";
 import Code from "@/components/Code";
 import { useEffect, useState } from "react";
+export const revalidate = 0;
 
 interface SearchResult {
   title: string;
