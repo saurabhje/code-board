@@ -39,7 +39,7 @@ with open("exmp.txt", "r") as file:
               6000,
               "File handling in Python",
               () => {
-                setRandom("javascript");
+                setRandom("python");
               },
               6000,
             ]}
@@ -58,7 +58,7 @@ with open("exmp.txt", "r") as file:
       </div>
       <div className="min-h-[200px] bg-slate-900 animate-in max-w-96">
         <p className="py-1 px-2 bg-zinc-900">{random}</p>
-        {random == "javascript" && (
+        {random == "python" && (
           <TypeAnimation
             className="px-2 py-1 whitespace-pre block font-mono text-[0.8em] md:text-[1em]"
             speed={99}
